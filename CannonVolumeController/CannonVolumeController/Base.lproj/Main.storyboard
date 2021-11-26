@@ -29,8 +29,14 @@
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cZV-pg-y7e">
                                 <rect key="frame" x="262" y="192" width="512" height="31"/>
+                                <color key="minimumTrackTintColor" systemColor="systemGray5Color"/>
                                 <color key="thumbTintColor" name="AccentColor"/>
                             </slider>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OsI-Sh-y6Z">
+                                <rect key="frame" x="257" y="187" width="37" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -43,6 +49,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animationView" destination="OsI-Sh-y6Z" id="F8H-K1-Lzq"/>
                         <outlet property="slider" destination="cZV-pg-y7e" id="UqJ-3b-yFv"/>
                         <outlet property="volumeButton" destination="uv0-gY-uQZ" id="hNU-pO-BoO"/>
                     </connections>
@@ -57,8 +64,14 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

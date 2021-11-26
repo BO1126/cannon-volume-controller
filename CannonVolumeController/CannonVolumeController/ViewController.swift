@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var volumeButton : UIButton!
     @IBOutlet weak var slider : UISlider!
+    @IBOutlet weak var animationView : UIView!
     
     var timer : Timer?
     var volume : Double = 0
@@ -23,6 +24,12 @@ class ViewController: UIViewController {
         let press = UILongPressGestureRecognizer()
         press.addTarget(self, action: #selector(self.pressed(_:)))
         volumeButton.addGestureRecognizer(press)
+        
+        let path = UIBezierPath()
+        path.move(to: CGPoint.zero)
+        path.addQuadCurve(to: CGPoint(x: 100, y: 0), controlPoint: CGPoint(x: 50, y: 200))
+        path.addLine(to: CGPoint(x: 99, y: 0))
+        path.addQuadCurve(to: CGPoint(x: 1, y: 0), controlPoint: CGPoint(x: 50, y: 198))
     }
     
     @objc func pressed(_ gesture : UILongPressGestureRecognizer?){
@@ -52,6 +59,7 @@ class ViewController: UIViewController {
         print("bang!")
         slider.value = Float(volume)
         slider.thumbTintColor = .link
+        startAnimation()
         volume = 0
     }
     
@@ -59,5 +67,19 @@ class ViewController: UIViewController {
         slider.thumbTintColor = .clear
     }
     
+    func startAnimation(){
+        
+        
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: animationView.frame.origin.x-100, y: animationView.frame.origin.y))
+        path.addQuadCurve(to: CGPoint(x: animationView.frame.origin.x+(volume*5), y: animationView.frame.origin.y), controlPoint: CGPoint(x: animationView.frame.origin.x, y: animationView.frame.origin.y-300))
+        
+        let animation : CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "position")
+        animation.path = path.cgPath
+        animation.duration = 1
+        animation.calculationMode = CAAnimationCalculationMode.cubic
+        
+        animationView.layer.add(animation, forKey: "position")
+    }
 }
 

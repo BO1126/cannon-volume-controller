@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     
     var timer : Timer?
     var volume : Double = 0
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +24,10 @@ class ViewController: UIViewController {
         press.addTarget(self, action: #selector(self.pressed(_:)))
         volumeButton.addGestureRecognizer(press)
         
-        let path = UIBezierPath()
-        path.move(to: CGPoint.zero)
-        path.addQuadCurve(to: CGPoint(x: 100, y: 0), controlPoint: CGPoint(x: 50, y: 200))
-        path.addLine(to: CGPoint(x: 99, y: 0))
-        path.addQuadCurve(to: CGPoint(x: 1, y: 0), controlPoint: CGPoint(x: 50, y: 198))
+        
+        animationView.clipsToBounds = true
+        animationView.layer.masksToBounds = true
+        animationView.layer.cornerRadius = 13
     }
     
     @objc func pressed(_ gesture : UILongPressGestureRecognizer?){
@@ -58,28 +56,25 @@ class ViewController: UIViewController {
     func holdEnd(){
         print("bang!")
         slider.value = Float(volume)
-        slider.thumbTintColor = .link
+        animationView.frame = CGRect(x: 264, y: 192, width: animationView.frame.width, height: animationView.frame.height)
         startAnimation()
         volume = 0
     }
     
-    @IBAction func touchDownButton(){
-        slider.thumbTintColor = .clear
-    }
-    
     func startAnimation(){
         
+        animationView.layer.backgroundColor = UIColor.link.cgColor
         
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: animationView.frame.origin.x-100, y: animationView.frame.origin.y))
-        path.addQuadCurve(to: CGPoint(x: animationView.frame.origin.x+(volume*5), y: animationView.frame.origin.y), controlPoint: CGPoint(x: animationView.frame.origin.x, y: animationView.frame.origin.y-300))
+        path.move(to: CGPoint(x: animationView.frame.origin.x-50, y: animationView.frame.origin.y-50))
+        path.addQuadCurve(to: CGPoint(x: animationView.frame.origin.x+(volume*5), y: animationView.frame.origin.y), controlPoint: CGPoint(x: animationView.frame.origin.x+CGFloat(volume*2), y: animationView.frame.origin.y-CGFloat(300 - (volume-100)*2)))
         
         let animation : CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "position")
         animation.path = path.cgPath
-        animation.duration = 1
-        animation.calculationMode = CAAnimationCalculationMode.cubic
-        
+        animation.duration = 0.6
         animationView.layer.add(animation, forKey: "position")
+        animationView.frame = CGRect(x: animationView.frame.origin.x+(volume*5), y: animationView.frame.origin.y, width: animationView.frame.width, height: animationView.frame.height)
+        
     }
 }
 

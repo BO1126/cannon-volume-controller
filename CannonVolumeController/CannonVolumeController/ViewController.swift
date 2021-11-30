@@ -10,12 +10,13 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var volumeButton : UIButton!
-    @IBOutlet weak var slider : UISlider!
+    @IBOutlet weak var slider : UIVolumeSlider!
     @IBOutlet weak var animationView : UIView!
     @IBOutlet weak var progressView : UIProgressView!
     
     var timer : Timer?
     var volume : Double = 0
+    var bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +32,23 @@ class ViewController: UIViewController {
         animationView.layer.cornerRadius = 13
         
         let gradientImage = UIImage.gradientImage(with: progressView.frame,
-                                                colors: [UIColor.red.cgColor, UIColor.green.cgColor],
+                                                colors: [UIColor.green.cgColor, UIColor.red.cgColor],
                                                 locations: nil)
         
         progressView.progressImage = gradientImage!
-        progressView.setProgress(0.75, animated: true)
+        
+        slider.updatePositionForSystemVolume()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+           super.viewDidAppear(animated)
+           slider.activate()
+       }
+
+       override func viewWillDisappear(_ animated: Bool) {
+           slider.deactivate()
+           super.viewWillDisappear(animated)
+       }
     
     @objc func pressed(_ gesture : UILongPressGestureRecognizer?){
             guard let ges = gesture else { return }
@@ -44,7 +56,7 @@ class ViewController: UIViewController {
             switch ges.state{
             case .began:
                 timer?.invalidate()
-                timer = Timer.scheduledTimer(timeInterval: 0.008, target: self, selector: #selector(hold), userInfo: nil, repeats: true)
+                timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(hold), userInfo: nil, repeats: true)
             case .ended, .cancelled:
                 holdEnd()
                 timer?.invalidate()
@@ -54,8 +66,21 @@ class ViewController: UIViewController {
         }
     
     @objc func hold(){
-        if volume < 100 {
-            volume+=1
+        if volume == 100 {
+            bool = false
+        }
+        else if volume == 0 {
+            bool = true
+        }
+        if bool == true{
+            if volume < 100 {
+                volume+=1
+                print(volume)
+                volumeButton.transform = CGAffineTransform(rotationAngle: -CGFloat(volume/100)).translatedBy(x: 0, y: 0);
+                progressView.progress = Float(volume/100)
+            }
+        }else{
+            volume-=1
             print(volume)
             volumeButton.transform = CGAffineTransform(rotationAngle: -CGFloat(volume/100)).translatedBy(x: 0, y: 0);
             progressView.progress = Float(volume/100)

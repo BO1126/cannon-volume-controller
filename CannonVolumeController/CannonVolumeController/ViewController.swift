@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var volumeButton : UIButton!
     @IBOutlet weak var slider : UISlider!
     @IBOutlet weak var animationView : UIView!
+    @IBOutlet weak var progressView : UIProgressView!
     
     var timer : Timer?
     var volume : Double = 0
@@ -28,6 +29,13 @@ class ViewController: UIViewController {
         animationView.clipsToBounds = true
         animationView.layer.masksToBounds = true
         animationView.layer.cornerRadius = 13
+        
+        let gradientImage = UIImage.gradientImage(with: progressView.frame,
+                                                colors: [UIColor.red.cgColor, UIColor.green.cgColor],
+                                                locations: nil)
+        
+        progressView.progressImage = gradientImage!
+        progressView.setProgress(0.75, animated: true)
     }
     
     @objc func pressed(_ gesture : UILongPressGestureRecognizer?){
@@ -50,6 +58,7 @@ class ViewController: UIViewController {
             volume+=1
             print(volume)
             volumeButton.transform = CGAffineTransform(rotationAngle: -CGFloat(volume/100)).translatedBy(x: 0, y: 0);
+            progressView.progress = Float(volume/100)
         }
     }
     
@@ -67,7 +76,7 @@ class ViewController: UIViewController {
         
         let path = UIBezierPath()
         path.move(to: CGPoint(x: animationView.frame.origin.x-50, y: animationView.frame.origin.y-50))
-        path.addQuadCurve(to: CGPoint(x: animationView.frame.origin.x+(volume*5), y: animationView.frame.origin.y), controlPoint: CGPoint(x: animationView.frame.origin.x+CGFloat(volume*2), y: animationView.frame.origin.y-CGFloat(300 - (volume-100)*2)))
+        path.addQuadCurve(to: CGPoint(x: animationView.frame.origin.x+(volume*5), y: animationView.frame.origin.y), controlPoint: CGPoint(x: animationView.frame.origin.x+CGFloat(volume*2.5), y: animationView.frame.origin.y-CGFloat(350 - (volume-100)*2)))
         
         let animation : CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "position")
         animation.path = path.cgPath
@@ -78,3 +87,24 @@ class ViewController: UIViewController {
     }
 }
 
+fileprivate extension UIImage {
+    static func gradientImage(with bounds: CGRect,
+                            colors: [CGColor],
+                            locations: [NSNumber]?) -> UIImage? {
+
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = colors
+        // This makes it horizontal
+        gradientLayer.startPoint = CGPoint(x: 0.0,
+                                        y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0,
+                                        y: 0.5)
+
+        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
+        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
+        return image
+    }
+}

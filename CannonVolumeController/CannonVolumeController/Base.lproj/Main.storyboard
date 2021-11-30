@@ -24,7 +24,7 @@
                                 </state>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cZV-pg-y7e">
-                                <rect key="frame" x="262" y="192" width="512" height="31"/>
+                                <rect key="frame" x="262" y="191" width="512" height="33"/>
                                 <color key="minimumTrackTintColor" systemColor="systemGray5Color"/>
                                 <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </slider>
@@ -36,21 +36,29 @@
                                     <constraint firstAttribute="height" constant="27" id="uIC-1a-aze"/>
                                 </constraints>
                             </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zdr-Tr-bFc">
+                                <rect key="frame" x="264" y="306" width="508" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OsI-Sh-y6Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="76R-19-OAn"/>
+                            <constraint firstItem="Zdr-Tr-bFc" firstAttribute="leading" secondItem="OsI-Sh-y6Z" secondAttribute="leading" id="7en-yH-7K6"/>
+                            <constraint firstItem="Zdr-Tr-bFc" firstAttribute="top" secondItem="cZV-pg-y7e" secondAttribute="bottom" constant="83" id="9d1-4Z-qZ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zdr-Tr-bFc" secondAttribute="bottom" constant="83" id="KGD-Nm-7Ah"/>
                             <constraint firstItem="cZV-pg-y7e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LSh-ZZ-U4h"/>
                             <constraint firstItem="cZV-pg-y7e" firstAttribute="leading" secondItem="uv0-gY-uQZ" secondAttribute="trailing" constant="80" id="Q2j-rN-2hG"/>
                             <constraint firstItem="uv0-gY-uQZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Sv0-uC-Iju"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cZV-pg-y7e" secondAttribute="trailing" constant="80" id="cj8-b0-hYo"/>
                             <constraint firstItem="uv0-gY-uQZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hH5-xw-qYw"/>
                             <constraint firstItem="OsI-Sh-y6Z" firstAttribute="leading" secondItem="uv0-gY-uQZ" secondAttribute="trailing" constant="80" id="sTo-i2-FV1"/>
+                            <constraint firstItem="Zdr-Tr-bFc" firstAttribute="trailing" secondItem="cZV-pg-y7e" secondAttribute="trailing" id="wf4-Av-ZJc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="animationView" destination="OsI-Sh-y6Z" id="F8H-K1-Lzq"/>
+                        <outlet property="progressView" destination="Zdr-Tr-bFc" id="wKr-Hm-2I1"/>
                         <outlet property="slider" destination="cZV-pg-y7e" id="UqJ-3b-yFv"/>
                         <outlet property="volumeButton" destination="uv0-gY-uQZ" id="hNU-pO-BoO"/>
                     </connections>

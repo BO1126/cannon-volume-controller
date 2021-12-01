@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4284D4672756F2F3008B2749 /* GravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284D4662756F2F3008B2749 /* GravityViewController.swift */; };
 		428EE137274F1F4F0061DC3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE136274F1F4F0061DC3D /* AppDelegate.swift */; };
 		428EE139274F1F4F0061DC3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE138274F1F4F0061DC3D /* SceneDelegate.swift */; };
 		428EE13B274F1F4F0061DC3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE13A274F1F4F0061DC3D /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4284D4662756F2F3008B2749 /* GravityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityViewController.swift; sourceTree = "<group>"; };
 		428EE133274F1F4F0061DC3D /* CannonVolumeController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CannonVolumeController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428EE136274F1F4F0061DC3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		428EE138274F1F4F0061DC3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,11 +63,12 @@
 				428EE136274F1F4F0061DC3D /* AppDelegate.swift */,
 				428EE138274F1F4F0061DC3D /* SceneDelegate.swift */,
 				428EE13A274F1F4F0061DC3D /* ViewController.swift */,
+				4293F5932755AF3000226487 /* UIVolumeSlider.swift */,
+				4284D4662756F2F3008B2749 /* GravityViewController.swift */,
 				428EE13C274F1F4F0061DC3D /* Main.storyboard */,
 				428EE13F274F1F500061DC3D /* Assets.xcassets */,
 				428EE141274F1F500061DC3D /* LaunchScreen.storyboard */,
 				428EE144274F1F500061DC3D /* Info.plist */,
-				4293F5932755AF3000226487 /* UIVolumeSlider.swift */,
 			);
 			path = CannonVolumeController;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				4293F5942755AF3000226487 /* UIVolumeSlider.swift in Sources */,
 				428EE13B274F1F4F0061DC3D /* ViewController.swift in Sources */,
 				428EE137274F1F4F0061DC3D /* AppDelegate.swift in Sources */,
+				4284D4672756F2F3008B2749 /* GravityViewController.swift in Sources */,
 				428EE139274F1F4F0061DC3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

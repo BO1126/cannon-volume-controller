@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var slider : UIVolumeSlider!
     @IBOutlet weak var animationView : UIView!
     @IBOutlet weak var progressView : UIProgressView!
+    @IBOutlet weak var volumeLabel : UILabel!
     
     var timer : Timer?
     var volume : Double = 0
@@ -25,7 +26,6 @@ class ViewController: UIViewController {
         let press = UILongPressGestureRecognizer()
         press.addTarget(self, action: #selector(self.pressed(_:)))
         volumeButton.addGestureRecognizer(press)
-        
         
         animationView.clipsToBounds = true
         animationView.layer.masksToBounds = true
@@ -97,7 +97,6 @@ class ViewController: UIViewController {
     
     func startAnimation(){
         
-        animationView.layer.backgroundColor = UIColor.link.cgColor
         
         let path = UIBezierPath()
         path.move(to: CGPoint(x: animationView.frame.origin.x-50, y: animationView.frame.origin.y-50))
@@ -108,7 +107,10 @@ class ViewController: UIViewController {
         animation.duration = 0.6
         animationView.layer.add(animation, forKey: "position")
         animationView.frame = CGRect(x: animationView.frame.origin.x+(volume*5), y: animationView.frame.origin.y, width: animationView.frame.width, height: animationView.frame.height)
-        
+    }
+    
+    @IBAction func dismissView(){
+        dismiss(animated: true)
     }
 }
 

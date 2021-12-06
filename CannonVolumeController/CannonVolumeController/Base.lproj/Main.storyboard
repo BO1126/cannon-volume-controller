@@ -17,32 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJC-SF-hXY">
-                                <rect key="frame" x="124" y="190" width="83" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemTealColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Cannon">
-                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="QM8-zS-q88"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pN-TG-WOb">
-                                <rect key="frame" x="290" y="190" width="79" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Gravity">
-                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="DIo-Yy-Wsw" kind="presentation" id="Hek-fG-0VP"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="255" translatesAutoresizingMaskIntoConstraints="NO" id="Nyn-WE-kXp">
+                                <rect key="frame" x="237.5" y="190" width="421" height="34.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJC-SF-hXY">
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="34.5"/>
+                                        <color key="tintColor" systemColor="systemTealColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Cannon">
+                                            <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="QM8-zS-q88"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pN-TG-WOb">
+                                        <rect key="frame" x="338" y="0.0" width="83" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Gravity">
+                                            <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="DIo-Yy-Wsw" kind="presentation" modalPresentationStyle="fullScreen" id="Hek-fG-0VP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vah-RF-E0j"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nyn-WE-kXp" firstAttribute="centerX" secondItem="OSG-mL-pJW" secondAttribute="centerX" id="Jvx-Zm-ITk"/>
+                            <constraint firstItem="Nyn-WE-kXp" firstAttribute="centerY" secondItem="OSG-mL-pJW" secondAttribute="centerY" id="rgz-BO-HnR"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xF8-1p-F8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -83,6 +90,9 @@
                             </view>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zdr-Tr-bFc">
                                 <rect key="frame" x="263.5" y="306" width="508.5" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="P00-NX-eq0"/>
+                                </constraints>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dga-HY-qeK">
                                 <rect key="frame" x="60" y="20" width="24" height="19"/>
@@ -140,11 +150,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ryI-sE-gjC" customClass="UIVolumeSlider" customModule="CannonVolumeController" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ryI-sE-gjC" customClass="UIVolumeSlider" customModule="CannonVolumeController" customModuleProvider="target">
                                 <rect key="frame" x="233" y="192" width="430" height="31"/>
-                                <connections>
-                                    <action selector="valueChangedSlider" destination="DIo-Yy-Wsw" eventType="valueChanged" id="8Ev-41-7jv"/>
-                                </connections>
+                                <color key="minimumTrackTintColor" systemColor="systemGray4Color"/>
+                                <color key="thumbTintColor" systemColor="systemTealColor"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv5-jd-rHM">
                                 <rect key="frame" x="407.5" y="292" width="81" height="21"/>
@@ -152,12 +161,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3P-Mc-cIS">
+                                <rect key="frame" x="60" y="20" width="24" height="19"/>
+                                <color key="tintColor" systemColor="systemTealColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="dismissView" destination="DIo-Yy-Wsw" eventType="touchUpInside" id="21T-fS-snI"/>
+                                    <action selector="dismissView" destination="BYZ-38-t0r" eventType="touchUpInside" id="ubA-gx-LFN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Crf-cO-lQI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="a3P-Mc-cIS" firstAttribute="leading" secondItem="Crf-cO-lQI" secondAttribute="leading" constant="16" id="Awt-QS-FyE"/>
                             <constraint firstItem="Crf-cO-lQI" firstAttribute="trailing" secondItem="ryI-sE-gjC" secondAttribute="trailing" constant="191" id="N4F-x0-D5V"/>
                             <constraint firstItem="ryI-sE-gjC" firstAttribute="centerY" secondItem="hVm-1X-leO" secondAttribute="centerY" id="bg0-oy-RdX"/>
+                            <constraint firstItem="a3P-Mc-cIS" firstAttribute="top" secondItem="Crf-cO-lQI" secondAttribute="top" constant="20" id="jVD-HW-9tn"/>
                             <constraint firstItem="Wv5-jd-rHM" firstAttribute="top" secondItem="ryI-sE-gjC" secondAttribute="bottom" constant="70" id="jfc-cT-XVP"/>
                             <constraint firstItem="Wv5-jd-rHM" firstAttribute="centerX" secondItem="hVm-1X-leO" secondAttribute="centerX" id="m3e-Go-U4M"/>
                             <constraint firstItem="ryI-sE-gjC" firstAttribute="leading" secondItem="Crf-cO-lQI" secondAttribute="leading" constant="191" id="v3N-9Z-4EV"/>
@@ -178,6 +199,9 @@
         <image name="volume.2" catalog="system" width="128" height="90"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

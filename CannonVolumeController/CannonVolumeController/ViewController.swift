@@ -92,6 +92,7 @@ class ViewController: UIViewController {
         slider.value = Float(volume)
         animationView.frame = CGRect(x: 264, y: 192, width: animationView.frame.width, height: animationView.frame.height)
         startAnimation()
+        slider.setVolume()
         volume = 0
     }
     

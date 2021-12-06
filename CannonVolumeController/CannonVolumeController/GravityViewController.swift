@@ -27,7 +27,6 @@ class GravityViewController: UIViewController {
                         deviceMotion: CMDeviceMotion!,
                         error: Error!
                     ) -> Void in
-                        print("y : \(deviceMotion.gravity.y)")
                         self.slider.value = Float(deviceMotion.gravity.y)
                         self.volumeLabel.text = "Volume : \(self.slider.value)"
                     }
@@ -43,6 +42,10 @@ class GravityViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         slider.deactivate()
         super.viewWillDisappear(animated)
+    }
+    
+    @IBAction func dismissView(){
+        dismiss(animated: true)
     }
     
 }

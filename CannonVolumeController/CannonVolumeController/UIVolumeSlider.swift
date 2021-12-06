@@ -54,4 +54,14 @@ class UIVolumeSlider: UISlider {
             slider.value = self.value
         }
     }
+    
+    func setVolume(){
+        guard let superview = superview else {return}
+        guard let volumeView = superview.subviews.first(where: {$0 is MPVolumeView}) as? MPVolumeView else { return }
+        guard let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider else { return }
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+            slider.value = self.value/100
+        }
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42804819276047C80099D12B /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42804818276047C80099D12B /* ShakeViewController.swift */; };
 		4284D4672756F2F3008B2749 /* GravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284D4662756F2F3008B2749 /* GravityViewController.swift */; };
 		428EE137274F1F4F0061DC3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE136274F1F4F0061DC3D /* AppDelegate.swift */; };
 		428EE139274F1F4F0061DC3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE138274F1F4F0061DC3D /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42804818276047C80099D12B /* ShakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
 		4284D4662756F2F3008B2749 /* GravityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityViewController.swift; sourceTree = "<group>"; };
 		428EE133274F1F4F0061DC3D /* CannonVolumeController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CannonVolumeController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428EE136274F1F4F0061DC3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42804817276047830099D12B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				428EE13A274F1F4F0061DC3D /* ViewController.swift */,
+				42804818276047C80099D12B /* ShakeViewController.swift */,
+				4284D4662756F2F3008B2749 /* GravityViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		428EE12A274F1F4F0061DC3D = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +72,10 @@
 		428EE135274F1F4F0061DC3D /* CannonVolumeController */ = {
 			isa = PBXGroup;
 			children = (
+				42804817276047830099D12B /* ViewController */,
 				428EE136274F1F4F0061DC3D /* AppDelegate.swift */,
 				428EE138274F1F4F0061DC3D /* SceneDelegate.swift */,
-				428EE13A274F1F4F0061DC3D /* ViewController.swift */,
 				4293F5932755AF3000226487 /* UIVolumeSlider.swift */,
-				4284D4662756F2F3008B2749 /* GravityViewController.swift */,
 				428EE13C274F1F4F0061DC3D /* Main.storyboard */,
 				428EE13F274F1F500061DC3D /* Assets.xcassets */,
 				428EE141274F1F500061DC3D /* LaunchScreen.storyboard */,
@@ -145,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4293F5942755AF3000226487 /* UIVolumeSlider.swift in Sources */,
+				42804819276047C80099D12B /* ShakeViewController.swift in Sources */,
 				428EE13B274F1F4F0061DC3D /* ViewController.swift in Sources */,
 				428EE137274F1F4F0061DC3D /* AppDelegate.swift in Sources */,
 				4284D4672756F2F3008B2749 /* GravityViewController.swift in Sources */,

@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     var timer : Timer?
     var volume : Double = 0
     var bool = true
+    var animationViewX : CGFloat = 0
+    var animationViewY : CGFloat = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,10 @@ class ViewController: UIViewController {
                                                 locations: nil)
         
         progressView.progressImage = gradientImage!
+        
+        animationViewX = animationView.frame.origin.x
+        animationViewY = animationView.frame.origin.y
+        print(animationViewX, animationViewY)
         
         slider.updatePositionForSystemVolume()
     }
@@ -90,7 +96,7 @@ class ViewController: UIViewController {
     func holdEnd(){
         print("bang!")
         slider.value = Float(volume)
-        animationView.frame = CGRect(x: 264, y: 192, width: animationView.frame.width, height: animationView.frame.height)
+        animationView.frame = CGRect(x: animationViewX, y: animationViewY, width: animationView.frame.width, height: animationView.frame.height)
         startAnimation()
         slider.setVolume()
         volume = 0

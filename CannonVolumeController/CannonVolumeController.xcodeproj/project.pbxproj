@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4240EC102761C2AF0053BF00 /* BigControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4240EC0F2761C2AF0053BF00 /* BigControllerViewController.swift */; };
 		42804819276047C80099D12B /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42804818276047C80099D12B /* ShakeViewController.swift */; };
 		4284D4672756F2F3008B2749 /* GravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284D4662756F2F3008B2749 /* GravityViewController.swift */; };
 		428EE137274F1F4F0061DC3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EE136274F1F4F0061DC3D /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4240EC0F2761C2AF0053BF00 /* BigControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigControllerViewController.swift; sourceTree = "<group>"; };
 		42804818276047C80099D12B /* ShakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
 		4284D4662756F2F3008B2749 /* GravityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityViewController.swift; sourceTree = "<group>"; };
 		428EE133274F1F4F0061DC3D /* CannonVolumeController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CannonVolumeController.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +51,7 @@
 				428EE13A274F1F4F0061DC3D /* ViewController.swift */,
 				42804818276047C80099D12B /* ShakeViewController.swift */,
 				4284D4662756F2F3008B2749 /* GravityViewController.swift */,
+				4240EC0F2761C2AF0053BF00 /* BigControllerViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				42804819276047C80099D12B /* ShakeViewController.swift in Sources */,
 				428EE13B274F1F4F0061DC3D /* ViewController.swift in Sources */,
 				428EE137274F1F4F0061DC3D /* AppDelegate.swift in Sources */,
+				4240EC102761C2AF0053BF00 /* BigControllerViewController.swift in Sources */,
 				4284D4672756F2F3008B2749 /* GravityViewController.swift in Sources */,
 				428EE139274F1F4F0061DC3D /* SceneDelegate.swift in Sources */,
 			);

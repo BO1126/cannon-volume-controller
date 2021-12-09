@@ -14,6 +14,7 @@ class GravityViewController: UIViewController {
     @IBOutlet weak var volumeLabel : UILabel!
     
     var motionManager = CMMotionManager()
+    var labelValue = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,12 @@ class GravityViewController: UIViewController {
                         error: Error!
                     ) -> Void in
                         self.slider.value = Float(deviceMotion.gravity.y)
-                        self.volumeLabel.text = "Volume : \(self.slider.value)"
+                        if Int(deviceMotion.gravity.y) < 0 {
+                            self.labelValue = Int(deviceMotion.gravity.y * -100)
+                        }else{
+                            self.labelValue = Int(deviceMotion.gravity.y*200)
+                        }
+                        self.volumeLabel.text = "Volume : \(self.labelValue)"
                     }
                 )
         

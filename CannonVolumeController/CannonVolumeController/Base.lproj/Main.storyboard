@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="m9C-sh-11Y">
-                                <rect key="frame" x="245.5" y="190" width="405" height="34.5"/>
+                                <rect key="frame" x="165" y="190" width="566" height="34.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJC-SF-hXY">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="34.5"/>
@@ -49,6 +49,16 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="DIo-Yy-Wsw" kind="presentation" modalPresentationStyle="fullScreen" id="Hek-fG-0VP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRb-dH-37p">
+                                        <rect key="frame" x="483" y="0.0" width="83" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Big">
+                                            <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="7tb-Ey-RRB" kind="presentation" modalPresentationStyle="fullScreen" id="a1N-bl-mIT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -150,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19.419642857142858" y="82.608695652173921"/>
+            <point key="canvasLocation" x="19" y="-1203"/>
         </scene>
         <!--Gravity View Controller-->
         <scene sceneID="3La-bT-Ovg">
@@ -201,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1Z-zB-j4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="958"/>
+            <point key="canvasLocation" x="19" y="-319"/>
         </scene>
         <!--Shake View Controller-->
         <scene sceneID="Tbk-GZ-o4M">
@@ -260,12 +270,122 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ck2-G4-s98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.75" y="1805.7971014492755"/>
+            <point key="canvasLocation" x="19" y="630"/>
+        </scene>
+        <!--Big Controller View Controller-->
+        <scene sceneID="t68-wf-NTz">
+            <objects>
+                <viewController id="7tb-Ey-RRB" customClass="BigControllerViewController" customModule="CannonVolumeController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6pc-QL-YAd">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-XB-OHm">
+                                <rect key="frame" x="399" y="67" width="350" height="280"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLs-Zp-YsZ">
+                                        <rect key="frame" x="0.0" y="73.5" width="50" height="133"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Ing-7m-KSp"/>
+                                            <constraint firstAttribute="height" constant="133" id="vmS-0j-C56"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBU-2V-Vz5">
+                                        <rect key="frame" x="75" y="55" width="50" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="NLX-9f-2zf"/>
+                                            <constraint firstAttribute="width" constant="50" id="czx-B3-UGg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mT-Mq-bpL">
+                                        <rect key="frame" x="150" y="40" width="50" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="ZPe-po-SZS"/>
+                                            <constraint firstAttribute="height" constant="200" id="xEE-fD-vc4"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCe-s4-vqI">
+                                        <rect key="frame" x="225" y="25" width="50" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="230" id="UHH-dh-dst"/>
+                                            <constraint firstAttribute="width" constant="50" id="zei-Pt-Wg6"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXw-cG-VNk">
+                                        <rect key="frame" x="300" y="0.0" width="50" height="280"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="280" id="RDa-bk-vs3"/>
+                                            <constraint firstAttribute="width" constant="50" id="xd4-4c-ayr"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXM-vK-jcB">
+                                <rect key="frame" x="133" y="77" width="258" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="cUC-YF-RWQ"/>
+                                    <constraint firstAttribute="width" constant="258" id="dRJ-af-44t"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemTealColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="volume.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="260"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwQ-F9-c8T">
+                                <rect key="frame" x="60" y="20" width="24" height="19"/>
+                                <color key="tintColor" systemColor="systemTealColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="dismissView" destination="DIo-Yy-Wsw" eventType="touchUpInside" id="CQv-ts-bDQ"/>
+                                    <action selector="dismissView" destination="PxQ-dJ-yvi" eventType="touchUpInside" id="ogQ-jB-jlp"/>
+                                    <action selector="dismissView" destination="7tb-Ey-RRB" eventType="touchUpInside" id="rVf-vU-tmc"/>
+                                    <action selector="dismissView" destination="BYZ-38-t0r" eventType="touchUpInside" id="wDc-uC-e4x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p0K-ls-tTu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xwQ-F9-c8T" firstAttribute="leading" secondItem="p0K-ls-tTu" secondAttribute="leading" constant="16" id="P50-BV-IWN"/>
+                            <constraint firstItem="pkc-XB-OHm" firstAttribute="centerY" secondItem="6pc-QL-YAd" secondAttribute="centerY" id="UcF-nE-wN2"/>
+                            <constraint firstItem="pkc-XB-OHm" firstAttribute="leading" secondItem="cXM-vK-jcB" secondAttribute="trailing" constant="8" symbolic="YES" id="ZHv-lV-5xx"/>
+                            <constraint firstItem="cXM-vK-jcB" firstAttribute="leading" secondItem="p0K-ls-tTu" secondAttribute="leading" constant="89" id="dUH-gS-rvo"/>
+                            <constraint firstItem="cXM-vK-jcB" firstAttribute="centerY" secondItem="6pc-QL-YAd" secondAttribute="centerY" id="egL-7m-tmU"/>
+                            <constraint firstItem="xwQ-F9-c8T" firstAttribute="top" secondItem="p0K-ls-tTu" secondAttribute="top" constant="20" id="pXU-C4-Mdq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7E-qf-fdV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="1522"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="volume.2" catalog="system" width="128" height="90"/>
+        <image name="volume.fill" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

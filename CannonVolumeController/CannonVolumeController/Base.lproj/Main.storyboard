@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aDe-Hr-6bQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aDe-Hr-6bQ">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <accessibilityOverrides dynamicTypePreference="3"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -115,7 +115,7 @@
                                 </constraints>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dga-HY-qeK">
-                                <rect key="frame" x="60" y="20" width="24" height="19"/>
+                                <rect key="frame" x="60" y="20" width="25" height="20.5"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="arrow.left" catalog="system"/>
@@ -123,12 +123,6 @@
                                     <action selector="dismissView" destination="BYZ-38-t0r" eventType="touchUpInside" id="T9v-DH-y6Y"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idD-aA-E3t">
-                                <rect key="frame" x="94" y="298" width="84" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" systemColor="systemTealColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -140,11 +134,9 @@
                             <constraint firstItem="cZV-pg-y7e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LSh-ZZ-U4h"/>
                             <constraint firstItem="cZV-pg-y7e" firstAttribute="leading" secondItem="uv0-gY-uQZ" secondAttribute="trailing" constant="80" id="Q2j-rN-2hG"/>
                             <constraint firstItem="uv0-gY-uQZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Sv0-uC-Iju"/>
-                            <constraint firstItem="idD-aA-E3t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="X1U-6Q-fc8"/>
                             <constraint firstItem="dga-HY-qeK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aNA-hi-274"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cZV-pg-y7e" secondAttribute="trailing" constant="80" id="cj8-b0-hYo"/>
                             <constraint firstItem="uv0-gY-uQZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hH5-xw-qYw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="idD-aA-E3t" secondAttribute="bottom" constant="74" id="p23-L8-0nf"/>
                             <constraint firstItem="OsI-Sh-y6Z" firstAttribute="leading" secondItem="uv0-gY-uQZ" secondAttribute="trailing" constant="80" id="sTo-i2-FV1"/>
                             <constraint firstItem="dga-HY-qeK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uin-l9-1NR"/>
                             <constraint firstItem="Zdr-Tr-bFc" firstAttribute="trailing" secondItem="cZV-pg-y7e" secondAttribute="trailing" id="wf4-Av-ZJc"/>
@@ -155,7 +147,6 @@
                         <outlet property="progressView" destination="Zdr-Tr-bFc" id="wKr-Hm-2I1"/>
                         <outlet property="slider" destination="cZV-pg-y7e" id="i4L-ur-Xt5"/>
                         <outlet property="volumeButton" destination="uv0-gY-uQZ" id="hNU-pO-BoO"/>
-                        <outlet property="volumeLabel" destination="idD-aA-E3t" id="NxZ-3p-TSW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -182,7 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3P-Mc-cIS">
-                                <rect key="frame" x="60" y="20" width="24" height="19"/>
+                                <rect key="frame" x="60" y="20" width="25" height="20.5"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="arrow.left" catalog="system"/>
@@ -238,7 +229,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HS-Pd-xfC">
-                                <rect key="frame" x="60" y="20" width="24" height="19"/>
+                                <rect key="frame" x="60" y="20" width="25" height="20.5"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="arrow.left" catalog="system"/>
@@ -353,7 +344,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwQ-F9-c8T">
-                                <rect key="frame" x="60" y="20" width="24" height="19"/>
+                                <rect key="frame" x="60" y="20" width="25" height="20.5"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="arrow.left" catalog="system"/>

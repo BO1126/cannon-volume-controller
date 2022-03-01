@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var slider : UIVolumeSlider!
     @IBOutlet weak var animationView : UIView!
     @IBOutlet weak var progressView : UIProgressView!
-    @IBOutlet weak var volumeLabel : UILabel!
     
     var timer : Timer?
     var volume : Double = 0
